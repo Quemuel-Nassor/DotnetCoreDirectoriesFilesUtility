@@ -3,18 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>DotNet.FilesFolderUtility</Title>
+    <Title>DotNet.DirectoryFilesUtility</Title>
     <Authors>Quemuel Nassor</Authors>
     <Description>This project is a utility for creating and managing pre-built .NET Web or .NET API application directories</Description>
-    <PackageId>dotnet-files-folders-utility</PackageId>
+    <PackageId>dotnet-directory-files-utility</PackageId>
     <RepositoryUrl>https://github.com/Quemuel-Nassor/dotnet-files-folders-utility</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Company>GirHub</Company>
+    <Company>GitHub</Company>
+	<Product>DotNetDirectoryFilesUtilityPkg</Product>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
