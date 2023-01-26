@@ -38,12 +38,12 @@ namespace FilesFoldersUtility
         {
             if (string.IsNullOrWhiteSpace(parent))
             {
-                throw new ArgumentException($"'{nameof(parent)}' cannot be null or empty.", nameof(parent));
+                throw new ArgumentException($"'{nameof(parent)}' cannot be null or whitespace.", nameof(parent));
             }
 
             if (string.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentException($"'{nameof(name)}' cannot be null or empty.", nameof(name));
+                throw new ArgumentException($"'{nameof(name)}' cannot be null or whitespace.", nameof(name));
             }
 
             AppFolders.Add(new FolderItem(parent, name));
