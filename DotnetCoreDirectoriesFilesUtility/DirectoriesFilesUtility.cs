@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using SH = DotnetCoreDirectoriesFilesUtility.SanitizerHelper;
 
 namespace FilesFoldersUtility
 {
@@ -48,7 +49,7 @@ namespace FilesFoldersUtility
 
         public string GetUrl(string folderName, string filename = null)
         {
-            string key = $"Web{folderName}";
+            string key = $"Web{SH.Sanitize(folderName)}";
 
             if (!AppFolders.ContainsKey(key))
                 throw new Exception("Url not found");
@@ -59,7 +60,7 @@ namespace FilesFoldersUtility
 
         public string GetPath(string folderName, string filename = null)
         {
-            string key = $"Physical{folderName}";
+            string key = $"Physical{SH.Sanitize(folderName)}";
 
             if (!AppFolders.ContainsKey(key))
                 throw new Exception("Directory not found");

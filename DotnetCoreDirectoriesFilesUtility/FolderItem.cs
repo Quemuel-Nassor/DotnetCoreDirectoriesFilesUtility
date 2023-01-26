@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Globalization;
-using System.Text.RegularExpressions;
+using SH = DotnetCoreDirectoriesFilesUtility.SanitizerHelper;
 
 namespace FilesFoldersUtility
 {
     internal class FolderItem : IComparable<FolderItem>
     {
-        private readonly TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
-        private string Sanitize(string name)
-        {
-            name = Regex.Replace(name, @"([\\\/|<>*:“?])", "", RegexOptions.Compiled);
-            return textInfo.ToTitleCase(name).Trim();
-        }
-
         /// <summary>
         /// Overloaded Builder to create directory
         /// </summary>
         /// <param name="name">Directory name</param>
         public FolderItem(string name)
         {
-            Name = Sanitize(name);
+            Name = SH.Sanitize(name);
         }
 
         /// <summary>
@@ -29,8 +21,8 @@ namespace FilesFoldersUtility
         /// <param name="name">Directory name</param>
         public FolderItem(string parent, string name)
         {
-            Parent = Sanitize(parent);
-            Name = Sanitize(name);
+            Parent = SH.Sanitize(parent);
+            Name = SH.Sanitize(name);
         }
 
         public string Parent { get; private set; }
