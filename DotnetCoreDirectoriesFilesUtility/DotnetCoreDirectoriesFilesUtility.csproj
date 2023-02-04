@@ -15,8 +15,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
     <FileVersion>1.0.0.2</FileVersion>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>added new features to handle files</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
