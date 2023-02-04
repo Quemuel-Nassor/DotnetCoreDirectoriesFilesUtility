@@ -1,5 +1,5 @@
-﻿using System;
-using SH = DotnetCoreDirectoriesFilesUtility.SanitizerHelper;
+﻿using DotnetCoreDirectoriesFilesUtility;
+using System;
 
 namespace FilesFoldersUtility
 {
@@ -11,7 +11,7 @@ namespace FilesFoldersUtility
         /// <param name="name">Directory name</param>
         public FolderItem(string name)
         {
-            Name = SH.Sanitize(name);
+            Name = name.SanitizeDir();
         }
 
         /// <summary>
@@ -21,8 +21,8 @@ namespace FilesFoldersUtility
         /// <param name="name">Directory name</param>
         public FolderItem(string parent, string name)
         {
-            Parent = SH.Sanitize(parent);
-            Name = SH.Sanitize(name);
+            Parent = parent.SanitizeDir();
+            Name = name.SanitizeDir();
         }
 
         public string Parent { get; private set; }
