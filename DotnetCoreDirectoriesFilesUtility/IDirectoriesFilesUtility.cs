@@ -1,4 +1,7 @@
-﻿namespace FilesFoldersUtility
+﻿using System.IO;
+using System.Threading.Tasks;
+
+namespace FilesFoldersUtility
 {
     public interface IDirectoriesFilesUtility
     {
@@ -19,5 +22,38 @@
         /// <exception cref="Exception">Directory not found</exception>
         /// <returns></returns>
         string GetPath(string folderName, string filename = null);
+
+        /// <summary>
+        /// Copy a file from source to destination
+        /// </summary>
+        /// <param name="sourcePath">Source file path</param>
+        /// <param name="destinationPath">Destination file path</param>
+        /// <param name="replaceIfExist">Overwrite file if already exist</param>
+        /// <returns>End file namee</returns>
+        /// <exception cref="ArgumentException">sourcePath or destinationPath is empty or null</exception>
+        /// <exception cref="Exception">Source file not found</exception>
+        string CopyFile(string sourcePath, string destinationPath, bool replaceIfExist = false);
+
+        /// <summary>
+        /// Move a file from source to destination deleting source file
+        /// </summary>
+        /// <param name="sourcePath">Source file path</param>
+        /// <param name="destinationPath">Destination file path</param>
+        /// <param name="replaceIfExist">Overwrite file if already exist</param>
+        /// <returns>End file namee</returns>
+        /// <exception cref="ArgumentException">SourcePath or destinationPath is empty or null</exception>
+        /// <exception cref="Exception">Source file not found</exception>
+        string MoveFile(string sourcePath, string destinationPath, bool replaceIfExist = false);
+
+        /// <summary>
+        /// Write a file from stream to destination
+        /// </summary>
+        /// <param name="file">File stream</param>
+        /// <param name="destinationPath">Destination file path</param>
+        /// <param name="replaceIfExist">Overwrite file if already exist</param>
+        /// <returns>End file namee</returns>
+        /// <exception cref="ArgumentNullException">File is null</exception>
+        /// <exception cref="ArgumentException">DestinationPath is empty or null</exception>
+        Task<string> WriteFile(Stream file, string destinationPath, bool replaceIfExist = false);
     }
 }
