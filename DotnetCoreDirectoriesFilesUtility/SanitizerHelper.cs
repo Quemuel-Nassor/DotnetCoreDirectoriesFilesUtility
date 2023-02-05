@@ -43,6 +43,7 @@ namespace DotnetCoreDirectoriesFilesUtility
                 return destinationPath;
 
             string filePath = Path.GetDirectoryName(destinationPath);
+            string extension = Path.GetExtension(destinationPath);
             string[] files = Directory.GetFiles(filePath);
 
             var filesThatContainsSameName = files.Where(f => f.GetFileName().IndexOf(destinationPath.GetFileName(), StringComparison.OrdinalIgnoreCase) >= 0).ToList();
@@ -56,7 +57,7 @@ namespace DotnetCoreDirectoriesFilesUtility
 
             int index = (filesIndexes.Any() ? filesIndexes.Max() : 0) + 1;
 
-            return destinationPath.Replace(".", $" ({index}).");
+            return destinationPath.Replace($"{extension}", $" ({index}){extension}");
 
         }
 
