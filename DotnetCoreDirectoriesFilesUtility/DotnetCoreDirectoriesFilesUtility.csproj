@@ -14,10 +14,12 @@
 	<Product>DotNetDirectoryFilesUtilityPkg</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
-    <FileVersion>1.0.0.3</FileVersion>
-    <AssemblyVersion>1.0.0.3</AssemblyVersion>
-    <Version>1.0.3</Version>
-    <PackageReleaseNotes>added new features to handle files</PackageReleaseNotes>
+    <FileVersion>1.0.0.4</FileVersion>
+    <AssemblyVersion>1.0.0.4</AssemblyVersion>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>file indexing bug fixed 
+downgraded Microsoft.Extensions.Hosting to compatibility with .Net Core 3.1
+added documentation, sample code and instructions</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
