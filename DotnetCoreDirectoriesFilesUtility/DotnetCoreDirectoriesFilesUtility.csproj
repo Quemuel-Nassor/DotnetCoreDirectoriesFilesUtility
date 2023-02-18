@@ -16,10 +16,10 @@
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
     <FileVersion>1.0.0.4</FileVersion>
     <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <Version>1.0.4</Version>
-    <PackageReleaseNotes>file indexing bug fixed 
-downgraded Microsoft.Extensions.Hosting to compatibility with .Net Core 3.1
-added documentation, sample code and instructions</PackageReleaseNotes>
+    <Version>1.0.5</Version>
+    <PackageReleaseNotes>Added package logo
+Updated README</PackageReleaseNotes>
+    <PackageIcon>directory-files-utility-logo.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +37,13 @@ added documentation, sample code and instructions</PackageReleaseNotes>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="directory-files-utility-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
