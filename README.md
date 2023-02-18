@@ -1,30 +1,26 @@
-<h1 align="center">Files Folders Utility</h1>
-<p align="center">
-<a href="#about">About</a>&nbsp;|
-<a href="#technology">Technology</a>&nbsp;|
-<a href="#technology">Installation</a>&nbsp;|
-<a href="#technology">Configuration</a>
-</p>
+# Files Folders Utility
 
-<div align="center">
+[About](#about)&nbsp;|
+[Technology](#technology)&nbsp;|
+[Installation](#technology)&nbsp;|
+[Configuration](#technology)
 
-[![NuGet](https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=plastic)][nuget-pkg] 
-[![GitHub](https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?style=plastic)](/LICENSE.txt) 
-[![Nuget](https://img.shields.io/nuget/dt/dotnet-directory-files-utility?color=informational&style=plastic)][nuget-pkg]
-</div>
+[![NuGet](https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=plastic)](https://www.nuget.org/packages/dotnet-directory-files-utility)
+[![GitHub](https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?style=plastic)](/LICENSE.txt)
+[![Nuget](https://img.shields.io/nuget/dt/dotnet-directory-files-utility?color=informational&style=plastic)](https://www.nuget.org/packages/dotnet-directory-files-utility)
 
-## <span id="about"> About</span>
-<p>This is a utility to aid in directory management for .NET Web or .NET API applications and includes tools to conveniently look up physical and server paths based on mapped directories</p>
+##  About
+This is a utility to aid in directory management for .NET Web or .NET API applications and includes tools to conveniently look up physical and server paths based on mapped directories
 
-## <span id="technology">Technology</span>
+## Technology
 
 [.NET Standard 2.0](https://learn.microsoft.com/pt-br/dotnet/standard/net-standard?tabs=net-standard-2-0)
 
-## <span id="installation">Installation</span>
-<p>To install and use this tool, you will need to install the [nuget package][nuget-pkg] and register the service in your application settings.</p>
+## Installation
+To install and use this tool, you will need to install the [nuget package](https://www.nuget.org/packages/dotnet-directory-files-utility) and register the service in your application settings.
 
-## <span id="configuration">Configuration</span>
-<p>A good practice recommendation is to store the names of the directories you want to map in constants, so it will be easier to manage the directories later, for example.</p>
+## Configuration
+A good practice recommendation is to store the names of the directories you want to map in constants, so it will be easier to manage the directories later, for example.
 
 ```c#
 public static class Consts
@@ -35,7 +31,7 @@ public static class Consts
 }
 ```
 
-<p>After downloading and installing the package, you need to register the service to use it in your application, it is mandatory to add at least one directory in the mapping settings, in case of mapping subdirectories the name of the parent directory must always precede the name of the child directory as example to follow:</p>
+After downloading and installing the package, you need to register the service to use it in your application, it is mandatory to add at least one directory in the mapping settings, in case of mapping subdirectories the name of the parent directory must always precede the name of the child directory as example to follow:
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -49,16 +45,16 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## <span id="samples">Samples</span>
-<p>After registering the service, you can use it like any other dependency injection in the context of your application, as shown in the following example.</p>
+## Samples
+After registering the service, you can use it like any other dependency injection in the context of your application, as shown in the following example.
 
 ```c#
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILoggerHomeController> _logger;
     private readonly IDirectoriesFilesUtility _utility;
 
-    public HomeController(ILogger<HomeController> logger, IDirectoriesFilesUtility utility)
+    public HomeController(ILoggerHomeController> logger, IDirectoriesFilesUtility utility)
     {
         _utility = utility;
         _logger = logger;
@@ -85,5 +81,3 @@ public class HomeController : Controller
     }
 }
 ```
-
-[nuget-pkg]:https://www.nuget.org/packages/dotnet-directory-files-utility
