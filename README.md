@@ -6,50 +6,25 @@
 <a href="#technology">Configuration</a>
 </p>
 
-<p align="center">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?color=orange&style=plastic">
-<img alt="Nuget" src="https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=plastic">
-<img alt="GitHub" src="https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?style=plastic">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?color=yellow&style=plastic">
-</p>
+<div align="center">
 
-<h2>
-<a id="about" class="anchor" aria-hidden="true" href="#about">
-<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-<path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-</svg>
-</a>
-About</h2>
-This is a utility to aid in directory management for .NET Web or .NET API applications and includes tools to conveniently look up physical and server paths based on mapped directories
+[![NuGet](https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=plastic)][nuget-pkg] 
+[![GitHub](https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?style=plastic)](/LICENSE.txt) 
+[![Nuget](https://img.shields.io/nuget/dt/dotnet-directory-files-utility?color=informational&style=plastic)][nuget-pkg]
+</div>
 
-<h2>
-<a id="technology" class="anchor" aria-hidden="true" href="#technology">
-<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-<path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-</svg>
-</a>
-Technology</h2>
+## <span id="about"> About</span>
+<p>This is a utility to aid in directory management for .NET Web or .NET API applications and includes tools to conveniently look up physical and server paths based on mapped directories</p>
+
+## <span id="technology">Technology</span>
 
 [.NET Standard 2.0](https://learn.microsoft.com/pt-br/dotnet/standard/net-standard?tabs=net-standard-2-0)
 
-<h2>
-<a id="installation" class="anchor" aria-hidden="true" href="#installation">
-<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-<path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-</svg>
-</a>
-Installation</h2>
+## <span id="installation">Installation</span>
+<p>To install and use this tool, you will need to install the [nuget package][nuget-pkg] and register the service in your application settings.</p>
 
-To install and use this tool, you will need to install the [nuget package][nuget-pkg] and register the service in your application settings.
-
-<h2>
-<a id="configuration" class="anchor" aria-hidden="true" href="#configuration">
-<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-<path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-</svg>
-</a>
-Configuration</h2>
-A good practice recommendation is to store the names of the directories you want to map in constants, so it will be easier to manage the directories later, for example.
+## <span id="configuration">Configuration</span>
+<p>A good practice recommendation is to store the names of the directories you want to map in constants, so it will be easier to manage the directories later, for example.</p>
 
 ```c#
 public static class Consts
@@ -60,7 +35,7 @@ public static class Consts
 }
 ```
 
-After downloading and installing the package, you need to register the service to use it in your application, it is mandatory to add at least one directory in the mapping settings, in case of mapping subdirectories the name of the parent directory must always precede the name of the child directory as example to follow:
+<p>After downloading and installing the package, you need to register the service to use it in your application, it is mandatory to add at least one directory in the mapping settings, in case of mapping subdirectories the name of the parent directory must always precede the name of the child directory as example to follow:</p>
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -74,14 +49,8 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-<h2>
-<a id="samples" class="anchor" aria-hidden="true" href="#samples">
-<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-<path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-</svg>
-</a>
-Samples</h2>
-After registering the service, you can use it like any other dependency injection in the context of your application, as shown in the following example.
+## <span id="samples">Samples</span>
+<p>After registering the service, you can use it like any other dependency injection in the context of your application, as shown in the following example.</p>
 
 ```c#
 public class HomeController : Controller
@@ -100,7 +69,7 @@ public class HomeController : Controller
         HttpClient cli = new HttpClient();
 
         Stream sampleStream = cli
-        .GetStreamAsync("https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg")
+        .GetStreamAsync("https://images.pexels.com/photos/15476378/pexels-photo-15476378.jpeg")
         .Result;
 
         //you can omit the parameter if you want to get the directory only
