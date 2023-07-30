@@ -23,18 +23,19 @@ namespace FilesFoldersUtility
         {
             Parent = parent.SanitizeDir();
             Name = name.SanitizeDir();
+            HasParent = true;
         }
 
         public string Parent { get; private set; }
         public string Name { get; private set; }
-        public bool HasParent() => !string.IsNullOrWhiteSpace(Parent);
+        public bool HasParent { get; private set; }
         public int CompareTo(FolderItem other)
         {
             if (other == null)
                 return -1;
 
             else
-                return HasParent().CompareTo(other.HasParent());
+                return HasParent.CompareTo(other.HasParent);
         }
     }
 }

@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ namespace FilesFoldersUtility
 {
     internal class DirectoriesFilesUtility : IDirectoriesFilesUtility
     {
-        private readonly Hashtable AppFolders = new Hashtable();
+        private readonly IDictionary<string, string> AppFolders = new Dictionary<string, string>();
 
         public DirectoriesFilesUtility(
             IServiceProvider services,
@@ -33,18 +32,18 @@ namespace FilesFoldersUtility
         private void CreateFolders(string rootAppFolder, string localhost, List<FolderItem> folders)
         {
             folders.Sort();
-            foreach (FolderItem item in folders)
+            for (int i = 0; i < folders.Count; i++)
             {
-                string basePath = !item.HasParent() ? rootAppFolder : (string)AppFolders[$"Physical{item.Parent}"];
-                string baseUrl = !item.HasParent() ? localhost : (string)AppFolders[$"Web{item.Parent}"];
+                string basePath = folders[i].HasParent ? AppFolders[$"Physical{folders[i].Parent}"] : rootAppFolder;
+                string baseUrl = folders[i].HasParent ? AppFolders[$"Web{folders[i].Parent}"] : localhost;
 
-                string physicalPath = Path.Combine(basePath, item.Name);
-                string webPath = $"{baseUrl}/{item.Name}";
+                string physicalPath = Path.Combine(basePath, folders[i].Name);
+                string webPath = $"{baseUrl}/{folders[i].Name}";
 
-                AppFolders.Add($"Physical{item.Name}", physicalPath);
-                AppFolders.Add($"Web{item.Name}", webPath);
+                AppFolders.Add($"Physical{folders[i].Name}", physicalPath);
+                AppFolders.Add($"Web{folders[i].Name}", webPath);
 
-                Directory.CreateDirectory((string)AppFolders[$"Physical{item.Name}"]);
+                Directory.CreateDirectory(physicalPath);
             }
         }
 
@@ -52,10 +51,9 @@ namespace FilesFoldersUtility
         {
             string key = $"Web{folderName.SanitizeDir()}";
 
-            if (!AppFolders.ContainsKey(key))
+            if (!AppFolders.TryGetValue(key, out string url))
                 throw new Exception("Url not found");
 
-            string url = (string)AppFolders[key];
             return !string.IsNullOrWhiteSpace(filename) ? $"{url}/{filename}" : url;
         }
 
@@ -63,10 +61,9 @@ namespace FilesFoldersUtility
         {
             string key = $"Physical{folderName.SanitizeDir()}";
 
-            if (!AppFolders.ContainsKey(key))
+            if (!AppFolders.TryGetValue(key, out string path))
                 throw new Exception("Directory not found");
 
-            string path = (string)AppFolders[key];
             return !string.IsNullOrWhiteSpace(filename) ? Path.Combine(path, filename) : path;
         }
 
