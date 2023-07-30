@@ -1,8 +1,8 @@
 # Files Folders Utility
 
-[About](#about) | [Technology](#technology) | [Installation](#technology) | [Configuration](#technology)
+[About](#about) | [Technology](#technology) | [Installation](#installation) | [Configuration](#configuration)
 
-[![NuGet](https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=flat)](https://www.nuget.org/packages/dotnet-directory-files-utility) [![GitHub](https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?color=green&style=flat)](https://github.com/Quemuel-Nassor/DotnetCoreDirectoriesFilesUtility/LICENSE.txt) [![Nuget](https://img.shields.io/nuget/dt/dotnet-directory-files-utility?color=informational&style=flat)](https://www.nuget.org/packages/dotnet-directory-files-utility)
+[![NuGet](https://img.shields.io/nuget/v/dotnet-directory-files-utility?style=flat)](https://www.nuget.org/packages/dotnet-directory-files-utility) [![GitHub](https://img.shields.io/github/license/quemuel-nassor/DotnetCoreDirectoriesFilesUtility?color=green&style=flat)](https://github.com/Quemuel-Nassor/DotnetCoreDirectoriesFilesUtility/blob/master/LICENSE.txt) [![Nuget](https://img.shields.io/nuget/dt/dotnet-directory-files-utility?color=informational&style=flat)](https://www.nuget.org/packages/dotnet-directory-files-utility)
 
 ## About
 This is a utility to aid in directory management for .NET Web or .NET API applications and includes tools to conveniently look up physical and server paths based on mapped directories
