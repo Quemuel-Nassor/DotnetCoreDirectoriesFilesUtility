@@ -16,9 +16,10 @@
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
     <FileVersion>1.0.0.4</FileVersion>
     <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <Version>1.0.5</Version>
-    <PackageReleaseNotes>Added package logo
-Updated README</PackageReleaseNotes>
+    <Version>1.0.6</Version>
+    <PackageReleaseNotes>Updated package logo
+Optmized file handlers
+Optmized folders handlers</PackageReleaseNotes>
     <PackageIcon>directory-files-utility-logo.png</PackageIcon>
   </PropertyGroup>
 
