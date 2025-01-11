@@ -16,10 +16,9 @@
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
     <FileVersion>1.0.0.4</FileVersion>
     <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <Version>1.0.6</Version>
-    <PackageReleaseNotes>Updated package logo
-Optmized file handlers
-Optmized folders handlers</PackageReleaseNotes>
+    <Version>1.0.7</Version>
+    <PackageReleaseNotes>Added patch for stream handling
+Updated dependencies for compatibility</PackageReleaseNotes>
     <PackageIcon>directory-files-utility-logo.png</PackageIcon>
   </PropertyGroup>
 
