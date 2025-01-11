@@ -115,6 +115,7 @@ namespace FilesFoldersUtility
 
             using (FileStream fs = new FileStream(destinationPath, FileMode.Create))
             {
+                file.Position = 0;
                 await file.CopyToAsync(fs);
             }
 
