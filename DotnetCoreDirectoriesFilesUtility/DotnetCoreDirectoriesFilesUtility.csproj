@@ -1,49 +1,48 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>DotNet.DirectoryFilesUtility</Title>
-    <Authors>Quemuel Nassor</Authors>
-    <Description>This project is a utility for creating and managing pre-built .NET Web or .NET API application directories</Description>
-    <PackageId>dotnet-directory-files-utility</PackageId>
-    <RepositoryUrl>https://github.com/Quemuel-Nassor/dotnet-files-folders-utility</RepositoryUrl>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Company>GitHub</Company>
-	<Product>DotNetDirectoryFilesUtilityPkg</Product>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
-    <FileVersion>1.0.0.5</FileVersion>
-    <AssemblyVersion>1.0.0.5</AssemblyVersion>
-    <Version>1.0.9</Version>
-    <PackageReleaseNotes>dependencies uprade
-updated access modifiers</PackageReleaseNotes>
-    <PackageIcon>directory-files-utility-logo.png</PackageIcon>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>DotNet.DirectoryFilesUtility</Title>
+		<Authors>Quemuel Nassor</Authors>
+		<Description>This project is a utility for creating and managing pre-built .NET Web or .NET API application directories</Description>
+		<PackageId>dotnet-directory-files-utility</PackageId>
+		<RepositoryUrl>https://github.com/Quemuel-Nassor/dotnet-files-folders-utility</RepositoryUrl>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Company>GitHub</Company>
+		<Product>DotNetDirectoryFilesUtilityPkg</Product>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
+		<FileVersion>1.0.0.6</FileVersion>
+		<AssemblyVersion>1.0.0.6</AssemblyVersion>
+		<Version>1.1.0</Version>
+		<PackageReleaseNotes>rollback minimal dependencies version for compatibility</PackageReleaseNotes>
+		<PackageIcon>directory-files-utility-logo.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="[9.0.6,)" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="[9.0.6,)" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="[6.0.1,)" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="[7.0.0,)" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="directory-files-utility-logo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="directory-files-utility-logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
