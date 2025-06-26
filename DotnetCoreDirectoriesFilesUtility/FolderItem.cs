@@ -3,7 +3,7 @@ using System;
 
 namespace FilesFoldersUtility
 {
-    internal class FolderItem : IComparable<FolderItem>
+    public class FolderItem : IComparable<FolderItem>
     {
         /// <summary>
         /// Overloaded Builder to create directory

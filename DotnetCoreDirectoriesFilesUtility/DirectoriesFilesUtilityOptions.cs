@@ -5,7 +5,7 @@ namespace FilesFoldersUtility
 {
     public class DirectoriesFilesUtilityOptions
     {
-        internal List<FolderItem> AppFolders = new List<FolderItem>();
+        public List<FolderItem> AppFolders = new List<FolderItem>();
         internal string Localhost { get; set; }
 
         /// <summary>
