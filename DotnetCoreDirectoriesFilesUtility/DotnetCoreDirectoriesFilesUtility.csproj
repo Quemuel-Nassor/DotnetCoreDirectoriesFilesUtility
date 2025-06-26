@@ -14,9 +14,9 @@
 	<Product>DotNetDirectoryFilesUtilityPkg</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>ASP.NET Core;API Web;Web App</PackageTags>
-    <FileVersion>1.0.0.4</FileVersion>
-    <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <Version>1.0.8</Version>
+    <FileVersion>1.0.0.5</FileVersion>
+    <AssemblyVersion>1.0.0.5</AssemblyVersion>
+    <Version>1.0.9</Version>
     <PackageReleaseNotes>fix: check if stream seek support before handle pointer</PackageReleaseNotes>
     <PackageIcon>directory-files-utility-logo.png</PackageIcon>
   </PropertyGroup>
@@ -33,9 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="[6.0.1,)" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="[7.0.0,)" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="[9.0.6,)" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="[9.0.6,)" />
   </ItemGroup>
 
   <ItemGroup>
