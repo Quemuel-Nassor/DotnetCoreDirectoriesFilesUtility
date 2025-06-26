@@ -11,7 +11,7 @@ namespace FilesFoldersUtility
         /// <param name="name">Directory name</param>
         public FolderItem(string name)
         {
-            Name = name.SanitizeDir();
+            Name = name.SanitizeDirectoryName();
         }
 
         /// <summary>
@@ -21,8 +21,8 @@ namespace FilesFoldersUtility
         /// <param name="name">Directory name</param>
         public FolderItem(string parent, string name)
         {
-            Parent = parent.SanitizeDir();
-            Name = name.SanitizeDir();
+            Parent = parent.SanitizeDirectoryName();
+            Name = name.SanitizeDirectoryName();
             HasParent = true;
         }
 

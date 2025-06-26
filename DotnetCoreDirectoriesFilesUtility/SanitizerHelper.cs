@@ -9,21 +9,19 @@ namespace DotnetCoreDirectoriesFilesUtility
 {
     internal static class SanitizerHelper
     {
-        private static TextInfo textInfo = Thread.CurrentThread.CurrentCulture.TextInfo;
         private static Regex WhiteSpaceRegx = new Regex(@"\s+", RegexOptions.Compiled);
         private static Regex AccentRegx = new Regex(@"\p{Mn}", RegexOptions.Compiled);
-        private static Regex SanitizeDirRegx = new Regex(@"([\\\/|<>*:“?])", RegexOptions.Compiled);
+        private static Regex SanitizeDirRegx = new Regex(@"[\\\/|<>*:“?]", RegexOptions.Compiled);
 
-        public static string SanitizeDir(this string name)
+        public static string SanitizeDirectoryName(this string input)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                return name;
+            if (string.IsNullOrWhiteSpace(input)) return input;
 
-            name = SanitizeDirRegx.Replace(name, "");
-            name = AccentRegx.Replace(name.Normalize(NormalizationForm.FormD), "");
-            name = WhiteSpaceRegx.Replace(name, "-");
+            input = SanitizeDirRegx.Replace(input, "");
+            input = AccentRegx.Replace(input.Normalize(NormalizationForm.FormD), "");
+            input = WhiteSpaceRegx.Replace(input, " ");
 
-            return textInfo.ToTitleCase(name).Trim();
+            return input.ToLower().Trim().Replace(" ", "-");
         }
     }
 
