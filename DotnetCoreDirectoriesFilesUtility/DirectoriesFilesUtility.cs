@@ -49,7 +49,7 @@ namespace FilesFoldersUtility
 
         public string GetUrl(string folderName, string filename = null)
         {
-            string key = $"Web{folderName.SanitizeDir()}";
+            string key = $"Web{folderName.SanitizeDirectoryName()}";
 
             if (!AppFolders.TryGetValue(key, out string url))
                 throw new Exception("Url not found");
@@ -59,7 +59,7 @@ namespace FilesFoldersUtility
 
         public string GetPath(string folderName, string filename = null)
         {
-            string key = $"Physical{folderName.SanitizeDir()}";
+            string key = $"Physical{folderName.SanitizeDirectoryName()}";
 
             if (!AppFolders.TryGetValue(key, out string path))
                 throw new Exception("Directory not found");
